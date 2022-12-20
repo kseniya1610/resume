@@ -1,0 +1,241 @@
+.body {
+    background-color: rgb(62, 153, 165);
+    font-family: Calibri, Helvetica, sans-serif;
+    display: block;
+    margin: 8px;
+}
+
+.wrapper {
+    font-size: 12pt;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "header"
+        "skills"
+        "experience"
+        "footer";
+    scale: none;
+}
+.name {
+    grid-area: header;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    font-size: 12pt;
+}
+.main {
+    width: 100%;
+    margin-left: -100px;
+    background-color: rgb(77, 137, 155);
+    padding: 10px 20px 10px 110px;
+    border: 10px;
+    display: inline-block;
+}
+.main h1 {
+    font-size: 2em;
+    word-wrap: anywhere;
+    flex-wrap: wrap;
+    line-height: 0.8em;
+}
+.photo {
+    max-width: 120px;
+    min-width: 130px;
+    height: 150px;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: lightgray;
+    border: white solid 2px;
+    z-index: 1;
+}
+.icon {
+    max-width: 1em;
+    color: white;
+}
+.contacts {
+    padding: 0;
+}
+.contacts > li {
+    overflow: hidden;
+    min-width: fit-content;
+    word-wrap: normal;
+    flex-basis: auto;
+    width: calc(var(--widthA) + 4em);
+}
+.contacts > li::marker{
+    content: none;
+}
+.experience-dates {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: steelblue;
+}
+article h1, .resume h1 {
+    color: firebrick;
+    font-size: 2em;
+    margin-bottom: 0.1em;
+}
+article h1, .courses h1 {
+    color: firebrick;
+    font-size: 2em;
+    margin-bottom: 0.1em;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Set a background color */
+  body {
+    background-color: #7ac7cc;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container_PO {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;} 
+.js {width: 65%; background-color: #f44336;} 
+.py {width: 60%; background-color: #808080;} 
+.cdr {width: 60%; background-color: #eefc28;}  
